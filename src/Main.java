@@ -7,6 +7,7 @@ public class Main {
         car2.setModelName("car2");
         car.setWheelsCount(4);
         car2.setWheelsCount(4);
+
         car.service(car, null, null);
         car2.service(car2, null, null);
 
