@@ -8,18 +8,12 @@ public class Main {
         car.setWheelsCount(4);
         car2.setWheelsCount(4);
 
-        car.service(car, null, null);
-        car2.service(car2, null, null);
-
         Truck truck = new Truck();
         Truck truck2 = new Truck();
         truck.setModelName("truck1");
         truck2.setModelName("truck2");
         truck.setWheelsCount(6);
         truck2.setWheelsCount(8);
-
-        truck.service(null,null,truck);
-        truck2.service(null,null,truck2);
 
         Bicycle bicycle = new Bicycle();
         Bicycle bicycle2 = new Bicycle();
@@ -28,9 +22,13 @@ public class Main {
         bicycle.setWheelsCount(2);
         bicycle2.setWheelsCount(2);
 
-        bicycle.service(null,bicycle,null);
-        bicycle2.service(null,bicycle2,null);
 
+        Interuse[] machine = {car,car2,truck,truck2,bicycle,bicycle2};
+
+        ServiceStation station = new ServiceStation();
+        for (Interuse machines: machine){
+            station.check(machines);
+        }
     }
 }
 

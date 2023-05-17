@@ -1,4 +1,4 @@
 public interface Interuse {
-  public void service();
+  void service();
 
 }

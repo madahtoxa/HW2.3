@@ -27,14 +27,11 @@ public abstract class MotorTransport extends Transport implements Interuse {
     }
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку у "+modelName);
+        System.out.println("Меняем покрышку у " + modelName);
 
     }
 
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель у " + getModelName());
     }
-
-
-
 }
