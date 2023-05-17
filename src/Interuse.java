@@ -1,7 +1,4 @@
 public interface Interuse {
-    void updateTyre();
+  public void service();
 
-    void checkEngine();
-
-    void checkTrailer();
 }

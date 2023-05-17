@@ -1,14 +1,15 @@
-public abstract class Transport implements Interuse {
-
+public abstract class MotorTransport implements Interuse {
     private String modelName;
     private int wheelsCount;
 
-    public Transport(String modelName, int wheelsCount) {
+    public MotorTransport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
-    public Transport() {
+
+    public MotorTransport() {
     }
+
     public String getModelName() {
         return modelName;
     }
@@ -24,9 +25,17 @@ public abstract class Transport implements Interuse {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
+
     public void updateTyre() {
         System.out.println("Меняем покрышку у "+modelName);
+
     }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+
     public void service(Car car, Bicycle bicycle, Truck truck) {
         if (car != null) {
             System.out.println("Обслуживаем " + car.getModelName());
@@ -48,7 +57,4 @@ public abstract class Transport implements Interuse {
             }
         }
     }
-
-
-
 }
